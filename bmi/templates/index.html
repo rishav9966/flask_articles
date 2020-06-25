@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="conainer">
+        <form action="/" method="post">
+            Weight<br>
+            <input type="text" name="weight" id="weight"><br>
+            Height<br>
+            <input type="text" name="height" id="height"><br>
+            <input type="submit" value="calculate">
+        </form>
+
+        <div>
+            {% if bmi %}
+                <p>BMI : {{ bmi }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
